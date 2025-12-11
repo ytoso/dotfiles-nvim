@@ -1,6 +1,6 @@
 -- require "nvchad.mappings"
 
-if vim.fn.has("wsl") then
+if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = 'win32yank'
 end
 
