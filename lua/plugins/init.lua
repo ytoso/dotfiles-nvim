@@ -1,5 +1,13 @@
 return {
   {
+    "mason-org/mason.nvim",
+    opts = {
+      "clangd",
+      "codelldb",
+    },
+  },
+
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
@@ -20,10 +28,17 @@ return {
   },
 
   {
-    "mason-org/mason.nvim",
-    opts = {
-      "clangd",
-      "codelldb",
-    },
+    "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    opts = function()
+      require("nvim-tree").setup()
+      return require "configs.nvimtree"
+    end,
   },
+
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate'
+  }
 }
