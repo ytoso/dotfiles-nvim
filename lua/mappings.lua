@@ -1,9 +1,5 @@
 -- require "nvchad.mappings"
 
-if vim.fn.has("wsl") == 1 then
-  vim.g.clipboard = 'win32yank'
-end
-
 local map = vim.keymap.set
 
 map("i", "<C-b>", "<ESC>^i", { desc = "move beginning of line" })
