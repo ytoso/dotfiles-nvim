@@ -29,7 +29,8 @@ return {
 
   {
     "nvim-tree/nvim-tree.lua",
-    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    -- cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    lazy = false,
     opts = function()
       require("nvim-tree").setup()
       return require "configs.nvimtree"
@@ -49,5 +50,14 @@ return {
       -- optional but recommended
       { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     }
-  }
+  },
+
+  {
+    "lervag/vimtex",
+    lazy = false,
+    init = function()
+      vim.g.vimtex_view_method = 'zathura'
+      vim.g.vimtex_complete_enabled = 0
+    end
+  },
 }
