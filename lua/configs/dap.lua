@@ -37,7 +37,7 @@ end
 
 dap.adapters.codelldb = {
   type = "executable",
-  command = "/home/ytong/.local/share/nvim/mason/packages/codelldb/extension/adapter/codelldb",
+  command = "codelldb",
 
   -- On windows you may have to uncomment this:
   -- detached = false,
