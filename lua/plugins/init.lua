@@ -48,7 +48,6 @@ return {
     dependencies = {
       'nvim-lua/plenary.nvim',
       -- optional but recommended
-      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     }
   },
 
@@ -59,5 +58,16 @@ return {
       vim.g.vimtex_view_method = 'zathura'
       vim.g.vimtex_complete_enabled = 0
     end
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = false,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
   },
 }
