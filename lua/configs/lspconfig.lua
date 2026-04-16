@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "clangd", "verible", "pyright", "texlab" }
+local servers = { "clangd", "verible", "pyright", "texlab", "codelldb" }
 vim.lsp.enable(servers)
 
 -- read :h vim.lsp.config for changing options of lsp servers 
