@@ -35,6 +35,13 @@ dap.listeners.before.event_exited.dapui_config = function()
   dapui.close()
 end
 
+require("mason-nvim-dap").setup({
+  ensure_installed = { "python", "codelldb" },
+  automatic_installation = true,
+})
+
+require("dap-python").setup("python")
+
 dap.adapters.codelldb = {
   type = "executable",
   command = "codelldb",

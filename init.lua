@@ -3,6 +3,8 @@ vim.g.mapleader = " "
 vim.o.exrc = true
 vim.o.clipboard = "unnamedplus"
 
+vim.opt.relativenumber = true
+
 local function paste()
   return {
     vim.fn.split(vim.fn.getreg(""), "\n"),
