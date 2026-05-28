@@ -23,7 +23,7 @@ map("n", "<leader>n", "<cmd>set nu!<CR>", { desc = "toggle line number" })
 map("n", "<leader>rn", "<cmd>set rnu!<CR>", { desc = "toggle relative number" })
 map("n", "<leader>ch", "<cmd>NvCheatsheet<CR>", { desc = "toggle nvcheatsheet" })
 
-map("n", "<leader>y", '"+y', {desc = "copy to system clipboard"})
+map("v", "<leader>y", '"+y', {desc = "copy to system clipboard"})
 map("n", "<leader>p", '"+p', {desc = "paste from system clipboard"})
 
 map({ "n", "x" }, "<leader>fm", function()

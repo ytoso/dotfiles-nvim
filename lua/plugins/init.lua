@@ -72,10 +72,4 @@ return {
       -- refer to the configuration section below
     }
   },
-
-  {
-    "karb94/neoscroll.nvim",
-    opts = {},
-    lazy = false,
-  },
-}
+ }
