@@ -113,3 +113,13 @@ map("n", "<leader>wK", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })
 map("n", "<leader>wk", function()
   vim.cmd("WhichKey " .. vim.fn.input "WhichKey: ")
 end, { desc = "whichkey query lookup" })
+
+local dap = require('dap')
+
+map('n', 'K', function()
+  if dap.session() ~= nil then
+    require('dapui').eval(nil, { enter = true })
+  else
+    vim.lsp.buf.hover()
+  end
+end, { desc = 'LSP/DAP Hover (NvChad Style)' })
