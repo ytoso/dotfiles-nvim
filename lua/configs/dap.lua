@@ -7,7 +7,9 @@ map('n', '<F6>', function()
 end)
 map('n', '<F1>', function() require('dap').step_over() end)
 map('n', '<F2>', function() require('dap').step_into() end)
+map('n', '<F14>', function() require('dap').step_into{askForTargets = true} end)
 map('n', '<F3>', function() require('dap').step_out() end)
+map('n', '<F4>', function() require('dap').run_to_cursor() end, { desc = 'DAP: Run to Cursor' })
 map('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
 map('n', '<Leader>c', function()
   require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
@@ -44,6 +46,7 @@ require("mason-nvim-dap").setup({
 })
 
 require("dap-python").setup("python")
+require('dap').configurations.python = {}
 
 dap.adapters.codelldb = {
   type = "executable",
